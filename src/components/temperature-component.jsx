@@ -7,17 +7,18 @@ const StyledTemperature = styled.div`
   position: absolute;
   left: 260px;
   top: 20px;
-  .current_temp {
-    font-size: 30px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
+`;
+
+const StyledCurrentTemp = styled.h1`
+  font-size: 30px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 `;
 
 const Temperature = ({ temperature }) => (
   <StyledTemperature>
     High: {temperature.temp_max}
-    <h1 className='current_temp'>{temperature.temp}</h1>
+    <StyledCurrentTemp>{temperature.temp}</StyledCurrentTemp>
     Low: {temperature.temp_min}
   </StyledTemperature>
 );

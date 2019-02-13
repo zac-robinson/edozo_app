@@ -5,15 +5,17 @@ import PropTypes from 'prop-types';
 const StyledConditions = styled.div`
   font-size: 16px;
   position: absolute;
-  left: 190px;
+  left: 170px;
   top: 20px;
   display: inline-block;
   text-align: center;
+`;
 
-  .description {
-    display: block;
-    margin-top: -13px;
-  }
+const StyledConditionDescription = styled.span`
+  display: block;
+  margin-top: -13px;
+  width: 60px;
+  overflow: hidden;
 `;
 
 const Conditions = ({ conditions }) => (
@@ -24,7 +26,9 @@ const Conditions = ({ conditions }) => (
       height='50'
       width='50'
     />
-    <span className='description'>{conditions.description}</span>
+    <StyledConditionDescription>
+      {conditions.description}
+    </StyledConditionDescription>
   </StyledConditions>
 );
 
