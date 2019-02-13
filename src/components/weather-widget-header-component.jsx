@@ -8,9 +8,12 @@ import Wind from './wind-component';
 import Conditions from './conditions-component';
 
 const StyledHeader = styled.div`
-  border: solid 2px red;
+  border-bottom: solid 2px grey;
   width: 100%;
   height: 45%;
+  border-radius: 8px;
+  background-color: #008cba;
+  color: white;
 `;
 
 const WeatherWidgetHeader = ({ city, temperature, wind, conditions }) => (

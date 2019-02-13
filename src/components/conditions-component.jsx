@@ -5,13 +5,14 @@ import PropTypes from 'prop-types';
 const StyledConditions = styled.div`
   font-size: 16px;
   position: absolute;
-  left: 150px;
+  left: 190px;
   top: 20px;
   display: inline-block;
   text-align: center;
 
   .description {
     display: block;
+    margin-top: -13px;
   }
 `;
 

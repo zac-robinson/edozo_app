@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const StyledWindInfo = styled.div`
   top: 40px;
-  left: 350px;
+  left: 330px;
   font-size: 14px;
   position: absolute;
 `;
@@ -12,7 +12,7 @@ const StyledWindInfo = styled.div`
 const Wind = ({ wind }) => (
   <StyledWindInfo>
     Wind speed: {wind.speed} m/s <br />
-    Wind direction: {windDirection(wind.deg)}
+    {wind.deg && <span>Wind direction: {windDirection(wind.deg)}</span>}
   </StyledWindInfo>
 );
 

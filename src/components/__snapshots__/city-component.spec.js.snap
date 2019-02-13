@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`City component should render correctly 1`] = `
-<styled.h1>
+<styled.h1
+  length={9}
+>
   city name
 </styled.h1>
 `;

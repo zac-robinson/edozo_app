@@ -6,8 +6,7 @@ exports[`Wind component should render correctly when straight on wind 1`] = `
   50
    m/s 
   <br />
-  Wind direction: 
-  N
+  0
 </styled.div>
 `;
 
@@ -17,7 +16,9 @@ exports[`Wind component should render correctly when wind is at angle 1`] = `
   50
    m/s 
   <br />
-  Wind direction: 
-  W
+  <span>
+    Wind direction: 
+    W
+  </span>
 </styled.div>
 `;

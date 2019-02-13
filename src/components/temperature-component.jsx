@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const StyledTemperature = styled.div`
   font-size: 12px;
   position: absolute;
-  left: 270px;
+  left: 260px;
   top: 20px;
   .current_temp {
     font-size: 30px;

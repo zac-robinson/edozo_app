@@ -1,10 +1,7 @@
 import { connect } from 'react-redux';
 
 import WeatherWidget from '../components/weather-widget-component';
-import {
-  fetchWeatherData,
-  refreshWeatherData
-} from '../actions/current-weather-actions';
+import { fetchWeatherData } from '../actions/current-weather-actions';
 import { selectCity } from '../actions/common-actions';
 
 const KELVIN_CONVERSION = 273.15;
@@ -20,7 +17,7 @@ const tempToCelcius = temperatureData => {
 };
 
 export const mapStateToProps = ({ selectedCity, weatherDataByCity }) => {
-  console.log('mapStateToProps');
+  console.log('mapStateToProps', selectedCity);
   return {
     city: selectedCity,
     conditions: weatherDataByCity[selectedCity].conditions,

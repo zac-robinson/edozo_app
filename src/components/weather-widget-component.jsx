@@ -3,12 +3,14 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import WeatherWidgetHeader from './weather-widget-header-component';
-import SelectCity from './select-city-component'
+import SelectCity from './select-city-component';
 
 const StyledWidget = styled.div`
   height: 200px;
-  width: 500px;
-  border: solid 2px blue;
+  width: 460px;
+  border: solid 2px grey;
+  border-radius: 10px;
+  background-color: lightgrey;
 `;
 
 const WeatherWidget = ({ city, conditions, temperature, wind }) => (
@@ -19,7 +21,7 @@ const WeatherWidget = ({ city, conditions, temperature, wind }) => (
       wind={wind}
       conditions={conditions}
     />
-<SelectCity />
+    <SelectCity />
   </StyledWidget>
 );
 
