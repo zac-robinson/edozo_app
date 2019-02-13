@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Wind component should render correctly when straight on wind 1`] = `
+<styled.div>
+  Wind speed: 
+  50
+   m/s 
+  <br />
+  Wind direction: 
+  N
+</styled.div>
+`;
+
+exports[`Wind component should render correctly when wind is at angle 1`] = `
+<styled.div>
+  Wind speed: 
+  50
+   m/s 
+  <br />
+  Wind direction: 
+  W
+</styled.div>
+`;

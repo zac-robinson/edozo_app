@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WeatherWidgetHeader component should render correctly 1`] = `
+<styled.div>
+  <City
+    city={
+      Object {
+        "name": "York",
+      }
+    }
+  />
+  <Temperature
+    temperature={
+      Object {
+        "temp": 45,
+      }
+    }
+  />
+  <Wind
+    wind={
+      Object {
+        "speed": 3444,
+      }
+    }
+  />
+  <Conditions
+    conditions={
+      Object {
+        "description": "still raining",
+      }
+    }
+  />
+</styled.div>
+`;

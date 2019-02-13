@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Temperature component should render correctly 1`] = `
+<styled.div>
+  High: 
+  45555
+  <h1
+    className="current_temp"
+  >
+    15
+  </h1>
+  Low: 
+  -1222
+</styled.div>
+`;

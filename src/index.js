@@ -1,12 +1,29 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import { render } from 'react-dom';
+import { createStore, applyMiddleware, compose } from 'redux';
+import { Provider } from 'react-redux';
+import thunkMiddleware from 'redux-thunk';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import App from './components/app-component';
+import rootReducer from './reducers/reducers';
+import { fetchWeatherData } from './actions/current-weather-actions';
+import { fetchForecastData } from './actions/five-day-forecast-actions';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+const store = createStore(
+  rootReducer,
+  compose(
+    applyMiddleware(thunkMiddleware),
+    window.__REDUX_DEVTOOLS_EXTENSION__()
+  )
+);
+
+store.dispatch(fetchWeatherData('London')).then(() => {
+  store.dispatch(fetchForecastData('London')).then(() =>
+    render(
+      <Provider store={store}>
+        <App />
+      </Provider>,
+      document.getElementById('root')
+    )
+  );
+});
