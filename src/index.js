@@ -10,15 +10,16 @@ import { fetchWeatherData } from './actions/current-weather-actions';
 import { fetchForecastData } from './actions/five-day-forecast-actions';
 
 const devTools =
-  (window.__REDUX_DEVTOOLS_EXTENSION__ &&
-    window.__REDUX_DEVTOOLS_EXTENSION__()) ||
+  (window.__REDUX_DEVTOOLS_EXTENSION__ && [
+    window.__REDUX_DEVTOOLS_EXTENSION__()
+  ]) ||
   [];
 
 const store = createStore(
   rootReducer,
   compose(
     applyMiddleware(thunkMiddleware),
-    devTools
+    ...devTools
   )
 );
 
