@@ -5,4 +5,6 @@ export const CityName = styled.h1`
   left: 25px;
   font-size: ${props => (props.length > 7 ? '22px' : '33px')};
   position: absolute;
+  width: 142px;
+  overflow: hidden;
 `;

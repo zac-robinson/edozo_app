@@ -44,7 +44,7 @@ export class ExpandedForecast extends React.Component {
   render() {
     return (
       <div>
-        <ExpandedDate>5 day forecast: {this.state.forecastDate}</ExpandedDate>
+        <ExpandedDate>5 Day Forecast: {this.state.forecastDate}</ExpandedDate>
         <Body>
           {this.state.forecastData &&
             this.state.forecastData.map((data, index) => (

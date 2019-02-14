@@ -20,7 +20,7 @@ const SelectCity = ({ dispatch }) => {
         }}
       >
         <TextBox ref={node => (input = node)} />
-        <SubmitBtn type='submit'>Get weather!</SubmitBtn>
+        <SubmitBtn type='submit'>Get Weather!</SubmitBtn>
       </form>
     </SubmitForm>
   );

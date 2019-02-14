@@ -4,8 +4,8 @@ import { WindInfo } from '../styles/wind.styles';
 
 const Wind = ({ wind }) => (
   <WindInfo>
-    Wind speed: {wind.speed} m/s <br />
-    {wind.deg && <span>Wind direction: {windDirection(wind.deg)}</span>}
+    Wind Speed: {wind.speed} m/s <br />
+    {wind.deg && <span>Wind Direction: {windDirection(wind.deg)}</span>}
   </WindInfo>
 );
 

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const ConditionGroup = styled.div`
   font-size: 16px;
   position: absolute;
-  left: 170px;
+  left: 187px;
   top: 20px;
   display: inline-block;
   text-align: center;
