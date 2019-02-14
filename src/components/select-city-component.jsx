@@ -7,7 +7,7 @@ import { fetchWeatherData } from '../actions/current-weather-actions';
 
 const StyledSubmitForm = styled.div`
   position: absolute;
-  top: 230px;
+  top: 220px;
   left: 80px;
 `;
 
@@ -38,6 +38,7 @@ const StyledSubmitButton = styled.button`
   color: black;
   border: 3px solid #008cba;
   border-radius: 4px;
+  outline: none;
 
   :hover {
     background-color: #008cba;

@@ -10,7 +10,7 @@ import Conditions from './conditions-component';
 const StyledHeader = styled.div`
   border-bottom: solid 2px grey;
   width: 100%;
-  height: 45%;
+  height: 90px;
   border-radius: 8px;
   background-color: #008cba;
   color: white;

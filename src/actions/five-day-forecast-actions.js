@@ -2,7 +2,7 @@ import fetch from 'cross-fetch';
 
 import { requestForecastData, receiveForecastData } from './common-actions';
 
-function callForecastDataAPI(city) {
+export function callForecastDataAPI(city) {
   return dispatch => {
     dispatch(requestForecastData(city));
     return fetch(
@@ -13,25 +13,8 @@ function callForecastDataAPI(city) {
   };
 }
 
-function shouldFetchForecastData(state, city) {
-  const forecastData = state.forecastDataByCity[city];
-
-  if (!forecastData) {
-    return true;
-  } else if (forecastData.isLoading) {
-    return false;
-  } else {
-    return forecastData.shouldRefresh;
-  }
-}
-
 export function fetchForecastData(city) {
-  console.log('forecast time');
-  return (dispatch, getState) => {
-    if (shouldFetchForecastData(getState(), city)) {
-      return dispatch(callForecastDataAPI(city));
-    } else {
-      return Promise.resolve();
-    }
+  return dispatch => {
+    return dispatch(callForecastDataAPI(city));
   };
 }

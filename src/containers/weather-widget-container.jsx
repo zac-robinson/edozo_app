@@ -17,7 +17,6 @@ const tempToCelcius = temperatureData => {
 };
 
 export const mapStateToProps = ({ selectedCity, weatherDataByCity }) => {
-  console.log('mapStateToProps', selectedCity);
   return {
     city: selectedCity,
     conditions: weatherDataByCity[selectedCity].conditions,
@@ -26,10 +25,12 @@ export const mapStateToProps = ({ selectedCity, weatherDataByCity }) => {
   };
 };
 
-export const mapDispatchToProps = dispatch => ({
-  selectCity: city => dispatch(selectCity(city)),
-  fetchWeatherData: city => dispatch(fetchWeatherData(city))
-});
+export const mapDispatchToProps = dispatch => {
+  return {
+    selectCity: city => dispatch(selectCity(city)),
+    fetchWeatherData: city => dispatch(fetchWeatherData(city))
+  };
+};
 
 export default connect(
   mapStateToProps,

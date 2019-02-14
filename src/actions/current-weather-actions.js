@@ -3,13 +3,14 @@ import fetch from 'cross-fetch';
 import {
   requestWeatherData,
   receiveWeatherData,
-  selectCity
+  selectCity,
+  resetDateIndex
 } from './common-actions';
-
-export const REFRESH_WEATHER_DATA = 'REFRESH_WEATHER_DATA';
+import { callForecastDataAPI } from './five-day-forecast-actions';
 
 export function callWeatherDataAPI(city) {
   return async dispatch => {
+    dispatch(resetDateIndex());
     dispatch(selectCity(city));
     dispatch(requestWeatherData(city));
     const response = await fetch(
@@ -22,6 +23,7 @@ export function callWeatherDataAPI(city) {
 
 export function fetchWeatherData(city) {
   return dispatch => {
-    return dispatch(callWeatherDataAPI(city));
+    dispatch(callWeatherDataAPI(city));
+    return dispatch(callForecastDataAPI(city));
   };
 }
