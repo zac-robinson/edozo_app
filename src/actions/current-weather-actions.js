@@ -14,7 +14,7 @@ export function callWeatherDataAPI(city) {
     dispatch(selectCity(city));
     dispatch(requestWeatherData(city));
     const response = await fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=988dcd5b250ea16e54ecd252ada3aef6`
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=988dcd5b250ea16e54ecd252ada3aef6`
     );
     const json = await response.json();
     return dispatch(receiveWeatherData(city, json));

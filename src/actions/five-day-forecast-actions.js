@@ -6,7 +6,7 @@ export function callForecastDataAPI(city) {
   return dispatch => {
     dispatch(requestForecastData(city));
     return fetch(
-      `http://api.openweathermap.org/data/2.5/forecast?q=${city}&APPID=988dcd5b250ea16e54ecd252ada3aef6`
+      `https://api.openweathermap.org/data/2.5/forecast?q=${city}&APPID=988dcd5b250ea16e54ecd252ada3aef6`
     )
       .then(response => response.json())
       .then(json => dispatch(receiveForecastData(city, json)));
