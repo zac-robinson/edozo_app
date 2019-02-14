@@ -8,10 +8,8 @@ exports[`Conditions component should render correctly 1`] = `
     src="http://openweathermap.org/img/w/testIcon.png"
     width="50"
   />
-  <span
-    className="description"
-  >
+  <styled.span>
     its probably raining
-  </span>
+  </styled.span>
 </styled.div>
 `;

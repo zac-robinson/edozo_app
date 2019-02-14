@@ -1,19 +1,12 @@
 import React from 'react';
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
-
-const StyledWindInfo = styled.div`
-  top: 40px;
-  left: 330px;
-  font-size: 14px;
-  position: absolute;
-`;
+import { WindInfo } from '../styles/wind.styles';
 
 const Wind = ({ wind }) => (
-  <StyledWindInfo>
+  <WindInfo>
     Wind speed: {wind.speed} m/s <br />
     {wind.deg && <span>Wind direction: {windDirection(wind.deg)}</span>}
-  </StyledWindInfo>
+  </WindInfo>
 );
 
 Wind.propTypes = {

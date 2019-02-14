@@ -1,35 +1,21 @@
 import React from 'react';
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-const StyledConditions = styled.div`
-  font-size: 16px;
-  position: absolute;
-  left: 170px;
-  top: 20px;
-  display: inline-block;
-  text-align: center;
-`;
-
-const StyledConditionDescription = styled.span`
-  display: block;
-  margin-top: -13px;
-  width: 60px;
-  overflow: hidden;
-`;
+import {
+  ConditionGroup,
+  ConditionDescription
+} from '../styles/conditions.styles';
 
 const Conditions = ({ conditions }) => (
-  <StyledConditions>
+  <ConditionGroup>
     <img
       src={buildImgURL(conditions.icon)}
       alt={conditions.main}
       height='50'
       width='50'
     />
-    <StyledConditionDescription>
-      {conditions.description}
-    </StyledConditionDescription>
-  </StyledConditions>
+    <ConditionDescription>{conditions.description}</ConditionDescription>
+  </ConditionGroup>
 );
 
 Conditions.propTypes = {

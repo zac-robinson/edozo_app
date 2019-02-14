@@ -2,31 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import ChangeDate from './change-date-component';
-
-const ExpandedDate = styled.div`
-  position: absolute;
-  top: 83px;
-  left: 26px;
-`;
-
-const StyledBodyDiv = styled.div`
-  display: flex;
-  width: 460px;
-  top: 150px;
-`;
-
-const ForecastDiv = styled.div`
-  flex: 1;
-  display: inline-block;
-  text-align: center;
-  border-left: 1px solid black;
-`;
-
-const Time = styled.div`
-  font-size: 12px;
-  display: block;
-  overflow: hidden;
-`;
+import {
+  ExpandedDate,
+  Body,
+  ForecastDiv,
+  Time
+} from '../styles/expanded-forecast.styles';
 
 export class ExpandedForecast extends React.Component {
   state = {
@@ -64,7 +45,7 @@ export class ExpandedForecast extends React.Component {
     return (
       <div>
         <ExpandedDate>5 day forecast: {this.state.forecastDate}</ExpandedDate>
-        <StyledBodyDiv>
+        <Body>
           {this.state.forecastData &&
             this.state.forecastData.map((data, index) => (
               <ForecastDiv key={index}>
@@ -79,7 +60,7 @@ export class ExpandedForecast extends React.Component {
                 </div>
               </ForecastDiv>
             ))}
-        </StyledBodyDiv>
+        </Body>
         <ChangeDate />
       </div>
     );

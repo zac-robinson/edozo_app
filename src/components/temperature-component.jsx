@@ -1,26 +1,14 @@
 import React from 'react';
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-const StyledTemperature = styled.div`
-  font-size: 12px;
-  position: absolute;
-  left: 260px;
-  top: 20px;
-`;
-
-const StyledCurrentTemp = styled.h1`
-  font-size: 30px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-`;
+import { TemperatureInfo, CurrentTemp } from '../styles/temperature.styles';
 
 const Temperature = ({ temperature }) => (
-  <StyledTemperature>
+  <TemperatureInfo>
     High: {temperature.temp_max}
-    <StyledCurrentTemp>{temperature.temp}</StyledCurrentTemp>
+    <CurrentTemp>{temperature.temp}</CurrentTemp>
     Low: {temperature.temp_min}
-  </StyledTemperature>
+  </TemperatureInfo>
 );
 
 Temperature.propTypes = {

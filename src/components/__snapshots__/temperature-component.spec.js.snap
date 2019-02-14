@@ -4,11 +4,9 @@ exports[`Temperature component should render correctly 1`] = `
 <styled.div>
   High: 
   45555
-  <h1
-    className="current_temp"
-  >
+  <styled.h1>
     15
-  </h1>
+  </styled.h1>
   Low: 
   -1222
 </styled.div>

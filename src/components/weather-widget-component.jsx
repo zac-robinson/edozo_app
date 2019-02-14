@@ -1,20 +1,12 @@
 import React from 'react';
-import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import WeatherWidgetHeader from './weather-widget-header-component';
 import SelectCity from './select-city-component';
-
-const StyledWidget = styled.div`
-  height: 160px;
-  width: 460px;
-  border: solid 2px grey;
-  border-radius: 10px;
-  background-color: lightgrey;
-`;
+import { Widget } from '../styles/weather-widget.styles';
 
 const WeatherWidget = ({ city, conditions, temperature, wind, children }) => (
-  <StyledWidget>
+  <Widget>
     <WeatherWidgetHeader
       city={city}
       temperature={temperature}
@@ -23,7 +15,7 @@ const WeatherWidget = ({ city, conditions, temperature, wind, children }) => (
     />
     {children}
     <SelectCity />
-  </StyledWidget>
+  </Widget>
 );
 
 WeatherWidget.propTypes = {
