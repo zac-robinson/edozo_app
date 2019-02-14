@@ -1,6 +1,8 @@
 ## Running The App
 
-To run the app use `yarn start` or `npm start`
+The app is hosted here: https://edozoapp.herokuapp.com/
+
+To run the app locally, use `yarn start` or `npm start`
 The app should now be running on [http://localhost:3000](http://localhost:3000) or whatever `Local` address is shown in your terminal.
 
 ## Running the Tests
