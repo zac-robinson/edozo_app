@@ -6,17 +6,15 @@ import WeatherWidgetHeader from './weather-widget-header-component';
 describe('WeatherWidgetHeader component', () => {
   it('should render correctly', () => {
     const props = {
-      city: {
-        name: 'York'
-      },
+      city: 'York',
       temperature: {
-        temp: 45
+        temp: '45'
       },
       wind: {
         speed: 3444
       },
       conditions: {
-        description: 'still raining'
+        icon: 'sun'
       }
     };
     const component = shallow(<WeatherWidgetHeader {...props} />);

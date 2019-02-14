@@ -3,19 +3,15 @@
 exports[`WeatherWidget component should render correctly 1`] = `
 <styled.div>
   <WeatherWidgetHeader
-    city={
-      Object {
-        "name": "York",
-      }
-    }
+    city="York"
     conditions={
       Object {
-        "description": "still raining",
+        "icon": "raining",
       }
     }
     temperature={
       Object {
-        "temp": 45,
+        "temp": "45",
       }
     }
     wind={

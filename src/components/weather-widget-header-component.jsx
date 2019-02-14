@@ -21,16 +21,16 @@ WeatherWidgetHeader.propTypes = {
   conditions: PropTypes.shape({
     icon: PropTypes.string.isRequired,
     main: PropTypes.string,
-    description: PropTypes.string.isRequired
+    description: PropTypes.string
   }).isRequired,
   temperature: PropTypes.shape({
-    temp_max: PropTypes.string.isRequired,
+    temp_max: PropTypes.string,
     temp: PropTypes.string.isRequired,
-    temp_min: PropTypes.string.isRequired
+    temp_min: PropTypes.string
   }).isRequired,
   wind: PropTypes.shape({
     speed: PropTypes.number,
-    deg: PropTypes.number.isRequired
+    deg: PropTypes.number
   }).isRequired
 };
 

@@ -12,7 +12,7 @@ const Wind = ({ wind }) => (
 Wind.propTypes = {
   wind: PropTypes.shape({
     speed: PropTypes.number,
-    deg: PropTypes.number.isRequired
+    deg: PropTypes.number
   }).isRequired
 };
 

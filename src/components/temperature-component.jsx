@@ -13,9 +13,9 @@ const Temperature = ({ temperature }) => (
 
 Temperature.propTypes = {
   temperature: PropTypes.shape({
-    temp_max: PropTypes.string.isRequired,
+    temp_max: PropTypes.string,
     temp: PropTypes.string.isRequired,
-    temp_min: PropTypes.string.isRequired
+    temp_min: PropTypes.string
   }).isRequired
 };
 

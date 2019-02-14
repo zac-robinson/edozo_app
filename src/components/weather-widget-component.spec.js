@@ -6,17 +6,15 @@ import WeatherWidget from './weather-widget-component';
 describe('WeatherWidget component', () => {
   it('should render correctly', () => {
     const props = {
-      city: {
-        name: 'York'
-      },
+      city: 'York',
       temperature: {
-        temp: 45
+        temp: '45'
       },
       wind: {
         speed: 3444
       },
       conditions: {
-        description: 'still raining'
+        icon: 'raining'
       }
     };
     const component = shallow(<WeatherWidget {...props} />);

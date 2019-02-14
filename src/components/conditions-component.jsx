@@ -22,7 +22,7 @@ Conditions.propTypes = {
   conditions: PropTypes.shape({
     icon: PropTypes.string.isRequired,
     main: PropTypes.string,
-    description: PropTypes.string.isRequired
+    description: PropTypes.string
   }).isRequired
 };
 
